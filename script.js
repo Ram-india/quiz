@@ -40,7 +40,7 @@ function startCountDown(){
             clearInterval(timer);
         }
         else{
-        countdownElement.innerText = "Time Left: "+ timeLeft + " seconds";
+        countdownElement.innerHTML = `Time Left : ${  timeLeft }  seconds`;
         timeLeft--;
         }
     },1000);
@@ -63,7 +63,7 @@ function displayQuestions(){
             };
         }
         document.getElementById("progress").innerText =
-        "Question" + (currentQuestionIndex + 1) + "of" + questions.length;
+        `Question ${ (currentQuestionIndex + 1) } of  ${questions.length}`;
     }else{
         showScores();
     }
@@ -72,7 +72,12 @@ function displayQuestions(){
 
 // score
 function showScores(){
-    document.getElementById("quiz").innerHTML ="<h2>Quiz completed</h2> <h2>Your score " + score + "</h2><a href='index.html'>Take Quiz Again</a>"
+    document.getElementById("quiz").innerHTML =
+    `<div class="score">
+        <h2>Quiz completed</h2>
+         <h2>Your score ${score }</h2>
+        <a href='index.html'>Take Quiz Again</a>
+    </div>`
 }
 //Answer check
 function checkAnswer(answer){

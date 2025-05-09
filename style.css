@@ -98,3 +98,18 @@
     padding: 1rem;
     outline: none;
   }
+  .score h2{
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .score a {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .score{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 3px;
+    padding: 8px 12px;
+  }
